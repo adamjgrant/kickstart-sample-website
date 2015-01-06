@@ -1,0 +1,462 @@
+// Index Page
+// ==========
+// Homepage for getkickstart.com
+
+@import ../chosen-theme
+
+img
+  max-width: 100%
+
+.home-wrapper
+  +wrapper
+  margin: 
+    top: calc(#{$space} + 10vw)
+    bottom: calc(#{$space} + 10vw)
+
+.index-hero
+  background-color: white
+  background: url('/img/hero.jpg')
+  background-repeat: no-repeat
+  background-position: center center
+  background-size: 200% 100%
+  padding: ($space * 2)
+  margin:
+    top: -72px
+    bottom: $space
+  padding-top: 70px
+
+  @media screen and (min-width: $desktop)
+    padding: ($space * 4)
+    margin-bottom: $space * 4
+    height: 500px
+    background-size: $xxl-monitor 100%
+
+  svg
+    // display: none
+    margin: 0px auto
+    max-width: 70%
+    height: 150px
+    width: 700px
+    fill: white
+    max-height: 300px
+    margin-top: $space
+
+  .svg-logo-k
+    display: block
+
+  .svg-logo
+    display: none
+
+  @media screen and (min-width: $tablet)
+    .svg-logo
+      display: block
+
+    .svg-logo-k
+      display: none 
+
+
+  h2
+    +heading-sm
+    text-align: center
+    color: white
+    opacity: 0.75
+
+    @media screen and (min-width: $desktop)
+      +heading-md
+
+section.blue
+  background: map-get($colors, blue)
+  overflow: hidden
+
+.a-simple-core,
+.last-pitch
+  +row
+
+  p
+    +p(true)
+    color: map-get($gray, lighter)
+
+.a-simple-core
+  margin-bottom: $space
+
+  > h1
+    +column(12)
+    text-align: center
+    +heading-md
+    margin-bottom: $space*2
+
+    @media screen and (min-width: $tablet)
+      +heading-xxl
+      margin-bottom: $space*4
+
+  .code, .no-jquery-required
+    +column('half')
+
+  .code
+    display: inline-flex
+    flex-direction: row
+    flex-wrap: wrap
+    align-content: stretch
+
+    .preview
+      +root-element
+      border-bottom-left-radius: 0
+      border-bottom-right-radius: 0
+      border-color: map-get($white, darkest)
+      width: 100%
+      margin-bottom: 0
+      text-align: center
+      padding-top: $space
+      min-height: 150px
+
+      h1
+        +heading-rg
+        display: block
+
+      a
+        display: inline-block
+        margin:
+          bottom: $space 
+
+    .source
+      +root-element
+      background: map-get($black, lightest)
+      width: 100%
+      border-top-left-radius: 0
+      border-top-right-radius: 0
+      color: map-get($colors, blue)
+      padding: $space
+      font-family: $mono-font-family
+      min-height: 250px
+
+      span.color
+        color: white
+
+  .no-jquery-required
+    img
+      max-width: 100%
+      margin: 0px auto
+      display: block
+
+      @media screen and (min-width: $phablet)
+        max-width: 300px
+
+.captions
+  +row
+
+  .caption
+    +column('half')
+
+    p
+      +p(true)
+      color: map-get($gray, lighter)
+
+    h1
+      +heading-rg
+      text-align: center
+
+.loves-to-be-extended 
+  margin-bottom: $space*2
+
+  > h1 
+    text-align: center
+    display: block
+    color: white
+    +heading-md
+
+    @media screen and (min-width: $tablet)
+      +heading-xxl
+
+  p
+    +p(true)
+    color: white
+    max-width: 400px
+    text-align: center
+    margin: 0px auto
+
+    a
+      color: white
+      text-decoration: underline
+
+  img
+    max-width: 100%
+    margin: 0px auto
+    display: block
+    margin-bottom: $space
+
+.ui
+  position: relative
+
+  .extension
+    background: white
+    height: 100px
+    max-width: 350px
+    display: none
+    margin: 0px auto
+      bottom: $space
+
+    @media screen and (min-width: $tablet)
+      +thumbnail-content
+
+    h1
+      +heading-xs
+        margin: 5px 0
+
+    h2
+      +heading-xxs
+      margin: 0
+      color: map-get($gray, light)
+
+    img
+      width: 100px
+      height: 100px
+
+    article h1:first-child
+      margin-top: 5px 
+
+    @media screen and (min-width: $tablet)
+      position: absolute
+      width: 350px
+      box-shadow: 5px 5px 0px rgba(0, 0, 0, 0.1)
+
+      &.extension-one
+        right: 60px
+        top: 50px
+
+      &.extension-two
+        top: 73%
+        right: 0
+
+      &.extension-three
+        bottom: 8%
+
+.use-in-any-project,
+.faster-and-lighter-than-bootstrap 
+  > h1
+    +heading-md
+    text-align: center
+
+    @media screen and (min-width: $tablet)
+      +heading-xxl
+
+  > h2
+    +heading-xs
+
+  img
+    margin: 0px auto
+
+.use-in-any-project
+  p
+    +p(true)
+    text-align: center
+
+  .logos
+    text-align: center
+    margin: $space 0
+
+  img
+    max-height: 100px
+    vertical-align: middle
+    display: inline-block
+    margin: 0px $space
+
+    @media screen and (min-width: $tablet)
+      max-height: 150px 
+
+.js, .css
+  display: inline-block
+  vertical-align: top
+  width: 100%
+
+  h2
+    +heading-xs
+
+  @media screen and (min-width: $tablet)
+    width: 50%
+    padding: $space*2
+
+.graph
+  width: 100%
+  height: 300px
+  margin:
+    bottom: $space
+  clear: both
+  display: flex
+  align-items: flex-end
+  justify-content: space-between
+
+  .kickstart, .bootstrap, .foundation, .group, .jquery
+    &:before, &:after
+      font-size: 0.8rem
+      line-height: normal
+
+      @media screen and (min-width: $tablet)
+        font-size: 1rem
+
+  .kickstart, .bootstrap, .foundation, .group
+    width: 33.4%
+    display: inline-block
+    vertical-align: bottom
+
+    &:before, &:after
+      display: block
+      text-align: center
+      color: map-get($gray, dark)
+
+    &:after
+      margin-top: 15px
+      color: white
+
+    &:before
+      margin-top: -20px
+
+      @media screen and (min-width: $tablet)
+        margin-top: -25px
+
+  .kickstart
+    background: map-get($colors, blue)
+
+  .bootstrap
+    background: map-get($gray, lighter)
+
+  .foundation
+    background: map-get($white, darkest)
+
+  .jquery
+    background: map-get($colors, red)
+
+  &.graph-css
+    .kickstart
+      height: (100% * (80/148))
+
+      &:before
+        content: "Kickstart"
+        color: map-get($colors, blue)
+
+      &:after
+        content: "80kb"
+
+    .bootstrap
+      height: (100% * (110/148))
+
+      &:before
+        content: "Bootstrap"
+
+      &:after
+        content: "110kb"
+
+    .foundation
+      height: 100%
+
+      &:before
+        content: "Foundation"
+
+      &:after
+        content: "148kb"
+
+  &.graph-js
+    .kickstart
+      height: (100% * (8/271))
+
+      &:before
+        content: "Kickstart \a 8kb"
+        color: map-get($colors, blue)
+        white-space: pre
+        margin-top: -40px
+
+    .group
+      height: 100%
+      display: flex
+      flex-direction: column
+      justify-content: flex-end
+
+    .bootstrap, .foundation
+      width: 100%
+      margin: 0
+      display: block
+
+      &:before
+        color: white
+
+    .bootstrap
+      height: (100% * (32/271))
+
+      &:before
+        content: "Bootstrap"
+
+      &:after
+        content: "32kb"
+
+    .foundation
+      height: (100% * (187/271))
+
+      &:before
+        content: "Foundation"
+
+      &:after
+        content: "187kb"
+
+    .jquery
+      height: (100% * (84/271))
+
+      &:before
+        content: "jQuery"
+        text-align: center
+        color: map-get($colors, red)
+        margin-top: -20px
+        display: block
+
+        @media screen and (min-width: $tablet)
+          margin-top: -25px
+
+      &:after
+        content: "84kb"
+        color: white
+        margin-top: 15px
+        text-align: center
+        display: block
+
+.specs
+  +row
+
+  h1
+    +heading-xs
+    +column(12)
+
+  .spec
+    +column(6)
+
+    @media screen and (min-width: $desktop)
+      +column(3)
+
+dl
+  font-size: 0.85rem
+
+  dt
+    font-weight: bold
+  dd
+    margin-left: 0
+
+.github-stars
+  display: none
+  padding: 0
+  margin: 0px auto
+  width: 170px
+
+  &.mobile
+    display: block
+    width: 110px
+
+  @media screen and (min-width: $tablet)
+    display: block
+
+    &.mobile
+      display: none
+
+.follow-everything-for-updates 
+  h1
+    text-align: center
+
+  .twitter-timeline
+    margin: 0px auto
+    display: block

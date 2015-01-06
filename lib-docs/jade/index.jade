@@ -1,0 +1,97 @@
+extends _layout
+
+block page-stylesheet
+  link(rel="stylesheet" href="/css/pages/index.min.css")
+
+block hero
+  header.index-hero
+    <svg class="svg-logo"><use xlink:href="#svg-logo"></use></svg>
+    <svg class="svg-logo-k"><use xlink:href="#svg-logo-k"></use></svg>
+    h2 The CSS Framework that Loves to Be Extended
+    <iframe class="github-stars" src="http://ghbtns.com/github-btn.html?user=ajkochanowicz&repo=kickstart&type=watch&count=true&size=large" allowtransparency="true" frameborder="0" scrolling="0" width="170" height="30"></iframe>
+    <iframe class="github-stars mobile" src="http://ghbtns.com/github-btn.html?user=ajkochanowicz&repo=kickstart&type=watch&count=true" allowtransparency="true" frameborder="0" scrolling="0" width="110" height="20"></iframe>
+
+block content
+  article.home-wrapper
+    section.preview
+      h1 [This is what it looks like]
+
+  section.blue
+    article.home-wrapper
+      section.checklist
+        h1 [Checklist]
+
+  article.home-wrapper
+    .faster-and-lighter-than-bootstrap
+      h1 Faster and lighter than Bootstrap
+
+      .css
+        h2 CSS
+        .graph.graph-css
+          .kickstart
+          .bootstrap
+          .foundation
+        p ...and even smaller when used semantically.
+
+      .js
+        h2 JavaScript
+        .graph.graph-js
+          .kickstart
+          .group
+            .jquery
+            .bootstrap
+
+          .group
+            .jquery
+            .foundation 
+
+  section.blue
+    article.home-wrapper
+      section.loves-to-be-extended
+        h1 Loves to be Extended
+
+        p 
+          | The library is just the core. Kickstart is designed to be extended and themed via the&nbsp;
+          a(href="http://kickstart.everything.io") Kickstart Store
+          | .
+
+  article.home-wrapper 
+    section.static-or-with-mixins
+      h1 [Use statically or with mixins]
+
+    section.use-in-any-project
+      h1 Use in any project
+      .logos
+        img(src="img/rubyonrails.png")
+        img(src="img/nodejs.png")
+        img(src="img/html5css3.jpg")
+      :markdown
+        The Kickstart library is available for basic HTML as well as official [Gulp](/docs/#{docsVersion}/#nodejs) and [Rails](/docs/#{docsVersion}/#rails) integrations.
+
+  article.home-wrapper
+    section.follow-everything-for-updates
+      h1 Follow Everything for Updates
+      <a class="twitter-timeline" href="https://twitter.com/everythingdotio" data-widget-id="535480681191964675">Tweets from @everythingdotio</a> <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
+  article.home-wrapper
+    footer.specs
+      h1 Specifications
+      
+      .spec
+        dl
+          dt Browser Support
+          dd Officially, Kickstart is a framework for <a href="http://eisenbergeffect.bluespire.com/evergreen-browsers/">Evergreen Browsers</a>. But I make an effort to support IE 10+, IE9 with shim, Chrome 35, Firefox 30+, Safari 8+
+
+      .spec
+        dl
+          dt License
+          dd 
+            a(href="http://opensource.org/licenses/MIT") MIT
+
+      .spec
+        dl
+          dt Source Files
+          dd Sass, Jade, CoffeeScript
+
+block postJS
+  script(src="js/index.js")

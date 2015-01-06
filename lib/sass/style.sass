@@ -1,0 +1,41 @@
+@import themes/default/theme
+
+// Write your styles here.
+
+h1
+  +heading-xl
+
+p
+  +p(true)
+
+header.navigation
+  +navbar($background-color: map-get($colors, green))
+
+main.main, footer.main
+  +wrapper
+
+.interface
+  +row
+
+.projects
+  +column('third')
+  +container()
+
+  ul
+    +list('unstyled')
+
+.order-menu
+  +navbar
+
+  .modify
+    +button-group
+
+    li a, li button
+      +button-color(map-get($colors, yellow))
+
+  .save
+    +button($background-color: map-get($colors, green))
+
+.detail-pane
+  +column('twothirds')
+

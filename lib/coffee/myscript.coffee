@@ -1,0 +1,3 @@
+myscript = () ->
+
+module.exports = myscript

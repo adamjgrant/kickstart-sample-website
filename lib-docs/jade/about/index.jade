@@ -1,0 +1,38 @@
+extends ../_layout
+
+block variables
+  - var showFooter = true
+  - var title = "About"
+
+block menuVars
+  - var menuItem = "about" 
+
+block page-stylesheet 
+  link(rel="stylesheet" href="/css/pages/docs/index.css")
+
+block content
+  .wrapper
+    :markdown
+      # About
+
+      Kickstart began as "Kickstrap", a tool to extend Bootstrap. The goal was to create a layer
+      where users could write their own customizations and add community extensions. This layer
+      would be separate from the Bootstrap core allowing Bootstrap itself to stay up to date 
+      without affecting the project's customizations.
+
+      In the third version of Kickstrap, Bootstrap has been removed entirely, hence the renaming
+      as "Kickstart". Kickstart 3 is now its own CSS framework.
+
+      ## Why another CSS framework?
+
+      With the previous two versions of Kickstrap, I became very familiar with the intricacies of
+      CSS and frameworks like Bootstrap, Foundation, and Bourbon. I noticed the following:
+
+      - Frameworks are huge and slow
+      - Difficult to extend
+      - Have only one or a few themes. Who wants a framework that makes your site look like
+        everyone else's?
+
+      Extensibility is a #1, unfulfilled need in the world of frameworks.  Kickstart is solving this
+      with its own native solution, the [Kickstart Store](http://kickstart.everything.io).
+
